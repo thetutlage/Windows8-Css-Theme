@@ -1,0 +1,136 @@
+body {
+	background: url("../img/bgmetro1.png") repeat scroll 0 0 transparent;
+	overflow: hidden;
+	position: relative;
+	background-color: #FFFFFF;
+	color: #333333;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	margin: 0;
+}
+*{
+	margin: 0px;
+}
+.bg_brown{
+	background-color: #1C1C1C !important;
+}
+.bg_yellow{
+	background-color: #FFC40D !important;
+}
+.bg_purple{
+	background-color: #603CBA !important;
+}
+.bg_pink {
+	background-color: #C3325F !important;
+}
+.bg_black{
+	background-color: #000 !important;
+}
+.bg_orange{
+	background-color: #D44A26 !important;
+}
+.bg_green{
+	background-color: #01A31C !important;
+}
+.bg_dark_blue{
+	background-color: #0a478b !important;
+}
+#wrapper{
+	width:100%;
+	padding-top: 60px;
+}
+.container{
+	width: 90%;
+	margin: auto;
+}
+#metro_boxes{
+	float: left;
+	margin-right: 60px;
+}
+#metro_boxes.grid_4{
+	width: 400px;
+}
+#metro_boxes.grid_8{
+	width: 800px;
+}
+#metro_boxes_wrapper{
+	width: 10000px !important;
+}
+#metro_boxes .m_boxes{
+	background-color: #2D89F0;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: block;
+	float: left;
+	height: 150px;
+	margin: 5px;
+	overflow: hidden;
+	position: relative;
+	text-decoration: none;
+	width: 150px;
+}
+#metro_boxes .m_boxes.m_boxes_vertical{
+	height: 310px;
+}
+#metro_boxes .m_boxes.m_boxes_double{
+	width: 310px;
+}
+#metro_boxes .m_boxes.m_boxes_triple{
+	width: 470px;
+}
+#metro_boxes .m_boxes_icon_wrapper{
+	display: table-cell;
+	margin-left: 0;
+	margin-top: 20px;
+	padding-top: 20px;
+	text-align: center;
+	vertical-align: middle !important;
+	width: 150px;
+}
+#metro_boxes .m_boxes.m_boxes_double .m_boxes_icon_wrapper{
+	width: 310px;
+}
+#metro_boxes .m_boxes.m_boxes_triple .m_boxes_icon_wrapper{
+	width: 470px;
+}
+#metro_boxes .m_boxes.m_boxes_vertical .m_boxes_icon_wrapper{
+	height: 310px;
+}
+#metro_boxes .m_boxes .m_boxes_icon_wrapper img{
+	height: 96px;
+	width: 96px;
+}
+#metro_boxes .m_boxes .m_boxes_text_wrapper{
+	bottom: 10px;
+	font-weight: 300;
+	color: #FFFFFF;
+	font-size: 14px;
+	left: 20px;
+	position: absolute;
+	font-family: Segoe UI,Tahoma,Arial,Verdana,sans-serif;
+}
+#time .left_pane{
+	float: left;
+	margin-right: 10px;
+	margin-top: 70px;
+}
+#time .left_pane.clock{
+	color: #FFFFFF;
+	font-size: 50px;
+	vertical-align: middle;
+	text-align: center;
+	padding-left: 20px;
+}
+#time .left_pane.cal{
+	color: #FFFFFF;
+	font-size: 19px;
+	margin-top: 60px;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+.day,.date{
+	display: block;
+	margin-bottom: 10px;
+	width:100%;
+}

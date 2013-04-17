@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/metro.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.transit.js"></script>
+	<script type="text/javascript">
+		$(function(){
+		
+			/* ON HOVER FUNCTION */
+			$('.m_boxes').hover(function(){
+				$(this).transition({
+					scale: 1.1
+				});
+			},function(){
+				$(this).transition({
+					scale: 1
+				});
+				$(this).css("z-index",10);
+			});
+			/* END ON HOVER FUNCTION */
+
+
+			/* ON CLICK FUNCTION */
+			$('.m_boxes').click(function(){
+				$(this).transition({
+					scale: 2.5
+				});
+				$(this).css("z-index",500000);
+			})
+			/* END ON CLICK FUNCTION */
+			
+			/* GET DATE AND TIME FUNCTION */
+			
+			function updateDateTime(){
+
+				var dateInit = new Date();
+				var weekday=new Array(7);
+				weekday[0]="Sunday";
+				weekday[1]="Monday";
+				weekday[2]="Tuesday";
+				weekday[3]="Wednesday";
+				weekday[4]="Thursday";
+				weekday[5]="Friday";
+				weekday[6]="Saturday";
+
+				dayName = weekday[dateInit.getDay()];
+
+				var month=new Array();
+				month[0]="January";
+				month[1]="February";
+				month[2]="March";
+				month[3]="April";
+				month[4]="May";
+				month[5]="June";
+				month[6]="July";
+				month[7]="August";
+				month[8]="September";
+				month[9]="October";
+				month[10]="November";
+				month[11]="December";
+				
+				monthName = month[dateInit.getMonth()];
+
+
+				var getHours = dateInit.getHours();
+				var getMinutes = dateInit.getMinutes();
+				var getDate = dateInit.getDate();
+
+				$('.hours').html(getHours);
+				$('.minutes').html(getMinutes);
+				$('.day').html(dayName);
+				$('.date').html(monthName +' , '+ getDate);
+			}
+			
+			setInterval(function(){
+				updateDateTime();
+			},1000);
+			
+			
+			/* END GET DATE AND TIME FUNCTION */
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="container">
+			<div id="metro_boxes_wrapper">
+				<div id="metro_boxes" class="grid_8">
+					<div class="m_boxes m_boxes_double m_boxes_vertical bg_dark_blue">
+						<div class="m_boxes_icon_wrapper">
+							<img src="img/iPad.png" />
+						</div><!-- end m_boxes_icon_wrapper -->
+						<div class="m_boxes_text_wrapper">
+							Ipad
+						</div><!-- end m_boxes_text_wrapper -->
+					</div>
+					<div class="m_boxes m_boxes_vertical bg_yellow">
+						<div class="m_boxes_icon_wrapper">
+							<img src="img/Windows Phone.png" />
+						</div><!-- end m_boxes_icon_wrapper -->
+						<div class="m_boxes_text_wrapper">
+							Windows Phone
+						</div><!-- end m_boxes_text_wrapper -->
+					</div>
+	
+					<div class="m_boxes m_boxes_double ">
+						<div class="m_boxes_icon_wrapper">
+							<img src="img/Computer%20alt%202.png" />
+						</div><!-- end m_boxes_icon_wrapper -->
+						<div class="m_boxes_text_wrapper">
+							My Computer
+						</div><!-- end m_boxes_text_wrapper -->
+					</div>
+
+					<div class="m_boxes">
+						<div class="m_boxes_icon_wrapper">
+							<img src="img/Twitter alt 2.png" />
+						</div><!-- end m_boxes_icon_wrapper -->
+						<div class="m_boxes_text_wrapper">
+							Twitter
+						</div><!-- end m_boxes_text_wrapper -->
+					</div>
+
+					<div class="m_boxes bg_green">
+						<div class="m_boxes_icon_wrapper">
+							<img src="img/Bluetooth.png" />
+						</div><!-- end m_boxes_icon_wrapper -->
+						<div class="m_boxes_text_wrapper">
+							BlueTooth
+						</div><!-- end m_boxes_text_wrapper -->
+					</div>
+
+					<div class="m_boxes m_boxes_double bg_black" id="time">
+						<div class="left_pane clock">
+							<span class="hours">19</span>:<span class="minutes">27</span>
+						</div>
+						<div class="left_pane cal">
+							<span class="day">Thursday</span>
+							<span class="date">September 13</span>
+						</div>
+					</div>
+
+					<div class="m_boxes m_boxes_triple bg_orange">
+						<div class="m_boxes_icon_wrapper">
+							<img src="img/My Video apps.png" />
+						</div><!-- end m_boxes_icon_wrapper -->
+						<div class="m_boxes_text_wrapper">
+							Video Apps
+						</div><!-- end m_boxes_text_wrapper -->
+					</div>
+				</div><!-- end metro_boxes -->
+
+
+				<div id="metro_boxes" class="grid_4">
+					<div class="m_boxes bg_orange">
+						<div class="m_boxes_icon_wrapper">
+							<img src="img/Libraries.png" />
+						</div><!-- end m_boxes_icon_wrapper -->
+						<div class="m_boxes_text_wrapper">
+							Libraries
+						</div><!-- end m_boxes_text_wrapper -->
+					</div>
+
+					<div class="m_boxes bg_green">
+						<div class="m_boxes_icon_wrapper">
+							<img src="img/Word alt 2.png" />
+						</div><!-- end m_boxes_icon_wrapper -->
+						<div class="m_boxes_text_wrapper">
+							Word
+						</div><!-- end m_boxes_text_wrapper -->
+					</div>
+
+					<div class="m_boxes bg_brown">
+						<div class="m_boxes_icon_wrapper">
+							<img src="img/Calendar.png" />
+						</div><!-- end m_boxes_icon_wrapper -->
+						<div class="m_boxes_text_wrapper">
+							Calendar
+						</div><!-- end m_boxes_text_wrapper -->
+					</div>
+
+					<div class="m_boxes">
+						<div class="m_boxes_icon_wrapper">
+							<img src="img/Android.png" />
+						</div><!-- end m_boxes_icon_wrapper -->
+						<div class="m_boxes_text_wrapper">
+							Android
+						</div><!-- end m_boxes_text_wrapper -->
+					</div>
+
+					<div class="m_boxes bg_yellow">
+						<div class="m_boxes_icon_wrapper">
+							<img src="img/Computer.png" />
+						</div><!-- end m_boxes_icon_wrapper -->
+						<div class="m_boxes_text_wrapper">
+							Computer
+						</div><!-- end m_boxes_text_wrapper -->
+					</div>
+
+					<div class="m_boxes bg_green">
+						<div class="m_boxes_icon_wrapper">
+							<img src="img/Messaging.png" />
+						</div><!-- end m_boxes_icon_wrapper -->
+						<div class="m_boxes_text_wrapper">
+							Messagning
+						</div><!-- end m_boxes_text_wrapper -->
+					</div>
+				</div><!-- end metro_boxes -->
+			</div><!-- end metro_boxes_wrapper -->
+		</div><!-- end container -->
+	</div>
+</body>
+</html>
